@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>OpenWireless.org Map</title>
+    <style type=text/css>
+      body {
+        background-color: black;
+        background-image: url(https://openwireless.org/sites/all/themes/openwireless/images/background.jpg);
+        background-repeat: repeat-x;
+      }
+      #canvas { height: 450px; width: 100%; margin-top: 260px;}
+    </style>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+
+    <script src="//maps.googleapis.com/maps/api/js?v=3.exp&sensor=true">
+    </script>
+
+    <script src="{{ static_url('map.js') }}"></script>
+  </head>
+
+  <body>
+    <div id=canvas></div>
+  </body>
+</html>
