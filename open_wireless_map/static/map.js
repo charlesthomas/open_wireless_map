@@ -2,7 +2,7 @@ var map;
 
 function init() {
     var options = {
-        zoom: 4,
+        zoom: 5,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     map = new google.maps.Map(document.getElementById('canvas'), options);
