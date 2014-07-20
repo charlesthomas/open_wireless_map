@@ -1,3 +1,4 @@
+from bson.json_util import dumps
 from tornado.gen import coroutine
 
 from base import BaseHandler
@@ -16,4 +17,4 @@ class ListHandler(BaseHandler):
         while (yield cursor.fetch_next):
             doc = cursor.next_object()
             data.append(doc)
-        self.write(data)
+        self.write(dumps(data))

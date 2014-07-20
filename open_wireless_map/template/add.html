@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Add your router to the OpenWireless.org Map</title>
+    <style type=text/css>
+      body {
+        background-color: black;
+        background-image: url(https://openwireless.org/sites/all/themes/openwireless/images/background.jpg);
+        background-repeat: repeat-x;
+        color: white;
+      }
+      #canvas { position: absolute;
+                height: 450px; width: 100%;
+                margin-top: 128px; }
+    </style>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+
+    <script src="//maps.googleapis.com/maps/api/js?v=3.exp&sensor=true">
+    </script>
+
+    <script src="{{ static_url('add_map.js') }}"></script>
+  </head>
+  <body>
+    <center>
+      <h2>Add your router to the OpenWireless.org map!</h2>
+      <h3>Drag your marker to the correct location</h3>
+      <form method=POST action='/add'>
+    
+        <input type=hidden value='' name=latitude id=latitude>
+        <input type=hidden value='' name=longitude id=longitude>
+        <input type=submit id=submit class='btn btn-primary'
+         disabled=true value="Add your router">
+      </form>
+    </center>
+
+    <div id=canvas>
+  </body>
+</html>
